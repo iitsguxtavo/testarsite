@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/site.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi Nando</title>
+    <style>
+        body{
+            background-color: rgb(28, 169, 204);
+            color: rgb(0, 0, 0);
+            font: 13pt Arial;
+        }
+    </style>
+</head>
+<body> 
+    
+    <h1>Você é o amor da minha vida?</h1> 
+    Digite seu nome (comece com letra maiúscula): <input type="text" name="txtnome" id="txtnome">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var nome = document.getElementById('txtnome')
+            var res = document.querySelector('div#res')
+            var nome2 = String(nome.value)
+            res.innerHTML = `<p>Seu nome é ${nome2}!</p>`
+            if (nome2 == "Fernando" || nome2 == "Nando" || nome2 == "Loser" ) {
+                res.innerHTML += `<p>Você é o amor da minha vida!</p>`
+            } else { 
+                if (nome2 == "Juninho") {
+                    res.innerHTML += `<p>Você é muito safado</p>`
+                } else {
+                    if (nome2 == "Junin") {
+                        res.innerHTML += `<p>Você é muito safado</p>`
+                    } else res.innerHTML += `<p> Você <strong>não</strong> é o amor da minha vida!</p>`
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
